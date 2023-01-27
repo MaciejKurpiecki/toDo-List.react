@@ -17,11 +17,15 @@ function App() {
       <header>
         <h1>Lista zadań</h1>
       </header>
-      <form>
-        <Section title="Dodaj nowe zadanie" body={<Form />} />
-        <Section title="Lista zadań" 
-        body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />} extraHeaderContent={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
-      </form>
+      <Section title="Dodaj nowe zadanie" body={<Form />} />
+      <Section
+        title="Lista zadań"
+        body={
+          <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
+        }
+        extraHeaderContent={
+          <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
+        } />
     </Container>
   );
 }
