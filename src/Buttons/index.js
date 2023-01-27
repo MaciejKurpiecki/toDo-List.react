@@ -1,9 +1,8 @@
 import './style.css';
 
-const Buttons = ({tasks, hideDoneTasks}) => {
+const Buttons = ({ tasks, hideDoneTasks }) => {
     if (!tasks.length) {
         return null;
-        ;
     }
     return (
         <div className="allTasksButtons">
