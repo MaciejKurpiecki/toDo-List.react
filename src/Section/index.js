@@ -3,7 +3,7 @@ import "./style.css";
 const Section = ({title, body, extraHeaderContent}) => (
     <section>
         <div>
-            <div class="section__container section__container--taskList">
+            <div className="section__container section__container--taskList">
                 <h2> {title} </h2>
                 {extraHeaderContent}
             </div>
