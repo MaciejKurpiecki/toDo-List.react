@@ -64,6 +64,8 @@
 
 .list__doneButton:hover {
     background-color: #009000;
+    border: 1px solid #000;
+    border-radius: 1px;
 }
 
 .list__doneButton:active {
