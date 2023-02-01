@@ -8,10 +8,7 @@ import { useState } from 'react';
 
 function App() {
   const [hideDoneTasks, setHideDoneTasks] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "przejsc na react", done: false },
-    { id: 2, content: "zjeść obiad", done: true },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const toggleHideDoneTasks = () => {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
