@@ -6,9 +6,15 @@ import Container from './Container';
 import { useState } from 'react';
 
 
+
 function App() {
+  const initialArray = () =>
+    JSON.parse(localStorage.getItem("tasksArray")) || [];
+
   const [hideDoneTasks, setHideDoneTasks] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(initialArray());
+
+  localStorage.setItem("tasksArray", JSON.stringify(tasks));
 
   const toggleHideDoneTasks = () => {
     setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
@@ -43,6 +49,7 @@ function App() {
       },
     ]);
   };
+
   return (
     <Container>
       <header>
