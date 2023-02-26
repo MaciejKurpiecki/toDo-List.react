@@ -12,8 +12,9 @@ export const StyledButtons = styled.button`
         color: #ccc;
     };
     @media (max-width: 767px){
-        flex-basis: 700px;
+        flex-basis: 100%;
         margin: 20px auto;
+        transition: 0s;
     }
 `;
 export const StyledAllTasksButtons = styled.div`
