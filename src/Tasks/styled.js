@@ -57,6 +57,7 @@ export const StyledRemoveButton = styled.button`
     &:hover{
         filter: brightness(120%);
         border: 1px solid ${({ theme }) => theme.colors.border};
+        border-radius: 1px;
     };
     &:active{
          filter: brightness(140%);
