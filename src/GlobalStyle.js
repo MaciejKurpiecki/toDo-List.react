@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -17,3 +20,4 @@ body {
   padding: 20px;
   block-size: auto;
 }
+`;
