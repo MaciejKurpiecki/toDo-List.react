@@ -1,15 +1,15 @@
-import "./style.css";
+import { StyledContainerHeader, StyledContainerContent } from "./styled";
 
-const Section = ({title, body, extraHeaderContent}) => (
+const Section = ({ title, body, extraHeaderContent }) => (
     <section>
         <div>
-            <div className="section__container section__container--taskList">
+            <StyledContainerHeader>
                 <h2> {title} </h2>
                 {extraHeaderContent}
-            </div>
-            <div className="section__container section__container--list">
+            </StyledContainerHeader>
+            <StyledContainerContent>
                 {body}
-            </div>
+            </StyledContainerContent>
         </div>
     </section>
 );
