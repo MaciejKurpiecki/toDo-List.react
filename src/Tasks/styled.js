@@ -16,7 +16,7 @@ export const StyledItem = styled.li`
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
     ${({ hidden }) => hidden && css`
         display:none;
@@ -24,7 +24,7 @@ export const StyledItem = styled.li`
 `;
 
 export const StyledDoneButton = styled.button`
-    background-color: green;
+    background-color: ${({ theme }) => theme.colors.confirm};
     text-decoration: none;
     width: 30px;
     height: 30px;
@@ -32,33 +32,34 @@ export const StyledDoneButton = styled.button`
     order: 1;
     align-self: center;
     flex-shrink: 0;
-    color: white;
+    color: ${({ theme }) => theme.colors.secondary};
 
     &:hover{
-        background-color: #009000;
-        border: 1px solid #000;
+       filter: brightness(120%);
+        border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 1px;
     };
     &:active{
-        background-color: #00b900;
+        filter: brightness(140%);
     }
 `;
 
 export const StyledRemoveButton = styled.button`
-    background-color: #ff0000;
+    background-color: ${({ theme }) => theme.colors.deny};
     height: 30px;
     width: 30px;
     border: none;
     order: 3;
     align-self: center;
     flex-shrink: 0;
-    color: white;
+    color: ${({ theme }) => theme.colors.secondary};
 
     &:hover{
-        background-color: #fd3c3c;
+        filter: brightness(120%);
+        border: 1px solid ${({ theme }) => theme.colors.border};
     };
     &:active{
-        background-color: #ff8484;
+         filter: brightness(140%);
     }
 `;
 

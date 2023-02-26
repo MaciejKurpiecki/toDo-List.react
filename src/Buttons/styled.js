@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
 export const StyledButtons = styled.button`
-    color: teal;
+    color: ${({ theme }) => theme.colors.main};
     border: none;
-    background-color: transparent;
+    background-color: ${({ theme }) => theme.colors.transparent};
     padding: 0 10px;
     font-size: 18px;
     transition: 0.3s;
 
     &:disabled{
-        color: #ccc;
+        color: ${({ theme }) => theme.colors.disable};
     };
-    @media (max-width: 767px){
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         flex-basis: 100%;
         margin: 20px auto;
         transition: 0s;
     }
 `;
 export const StyledAllTasksButtons = styled.div`
-@media (max-width: 767px) {
+@media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         display: flex;
         flex-wrap: wrap;
         flex-basis: 100%;

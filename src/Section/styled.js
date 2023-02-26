@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const StyledContainer = styled.div`
-    background-color: #ffffff;
     padding: 10px 25PX;
-    background-color: #FFFFFF;
+    background-color: ${({ theme }) => theme.colors.secondary};
     gap: 20px;
     margin: 2px;
 
@@ -13,7 +12,7 @@ export const StyledContainer = styled.div`
         justify-content: space-between;
         align-items: center;
 
-            @media (max-width: 767px) {    
+            @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {    
                 flex-wrap: wrap;    
             }
     `}
