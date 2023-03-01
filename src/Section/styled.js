@@ -17,7 +17,7 @@ export const StyledContainer = styled.div`
             }
     `}
 
-    ${({ content }) => content && css`
+    ${({ mainContent }) => mainContent && css`
         padding: 25px;
         margin-bottom: 15px;
     `}
