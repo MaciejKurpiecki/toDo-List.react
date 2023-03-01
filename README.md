@@ -8,13 +8,12 @@ https://maciejkurpiecki.github.io/toDo-List.react/
 ![gif](Images/presentation.gif/)
 ## Technologies
 - HTML
-- CSS 
-- BEM
+- ES6
 - Flex
 - media queries
 - JavaScript
-- ES6
 - React
+- Styled-components
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
