@@ -70,6 +70,6 @@ export const StyledTask = styled.span`
     align-self: center;
 
     ${({ done }) => done && css`
-    text-decoration: line-through;
+        text-decoration: line-through;
     `}
 `;

@@ -5,9 +5,7 @@ export const useTasks = () => {
 
     useEffect(() => {
         localStorage.setItem("tasksArray", JSON.stringify(tasks));
-    },
-        [tasks]
-    );
+    }, [tasks]);
 
     const removeTask = (id) => {
         setTasks(tasks => tasks.filter(task => task.id !== id)
@@ -15,19 +13,16 @@ export const useTasks = () => {
     };
 
     const toggleTaskDone = (id) => {
-        setTasks(tasks => tasks.map(task => {
-            if (task.id === id) {
-                return { ...task, done: !task.done };
-            }
-            return task;
-        }));
+        setTasks(tasks => tasks.map(task => task.id === id ? { ...task, done: !task.done } : task));
     };
+
     const setAllDone = () => {
         setTasks(tasks => tasks.map(task => ({
             ...task,
             done: true,
         })))
     };
+
     const addNewTask = (newTaskContent) => {
         setTasks(tasks => [
             ...tasks,

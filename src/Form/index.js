@@ -6,15 +6,19 @@ const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
   const inputRef = useRef(null);
 
-  const addNewTaskContent = (event) => setNewTaskContent(event.target.value);
+  const handleTaskContentChange = (event) => setNewTaskContent(event.target.value);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    if (newTaskContent.trim().length > 0) {
-      addNewTask(newTaskContent.trim());
-      setNewTaskContent("");
+
+    const trimmedTaskContent = newTaskContent.trim();
+
+    if (!trimmedTaskContent) {
+      return;
     }
-    return null;
+
+    addNewTask(trimmedTaskContent);
+    setNewTaskContent("");
   };
 
   const focusInput = () => {
@@ -29,7 +33,7 @@ const Form = ({ addNewTask }) => {
         ref={inputRef}
         placeholder="Co jest do zrobienia?"
         value={newTaskContent}
-        onChange={addNewTaskContent}
+        onChange={handleTaskContentChange}
       />
       <StyledFormAddButton
         onClick={focusInput}

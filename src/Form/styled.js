@@ -27,7 +27,8 @@ export const StyledFormAddButton = styled.button`
     };
     &:active{
         filter: brightness(140%);
-         };
+        };
+        
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {  
         flex-basis: 100%;
         flex-shrink: 1;
