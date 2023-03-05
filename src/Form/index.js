@@ -19,9 +19,6 @@ const Form = ({ addNewTask }) => {
 
     addNewTask(trimmedTaskContent);
     setNewTaskContent("");
-  };
-
-  const focusInput = () => {
     inputRef.current.focus();
   };
 
@@ -35,9 +32,7 @@ const Form = ({ addNewTask }) => {
         value={newTaskContent}
         onChange={handleTaskContentChange}
       />
-      <StyledFormAddButton
-        onClick={focusInput}
-      >Dodaj zadanie</StyledFormAddButton>
+      <StyledFormAddButton>Dodaj zadanie</StyledFormAddButton>
     </StyledFormContainer>
   )
 };
