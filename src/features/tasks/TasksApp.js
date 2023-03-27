@@ -3,13 +3,8 @@ import Tasks from './Tasks';
 import Buttons from './Buttons';
 import Section from '../../common/Section';
 import Container from '../../common/Container';
-import { useTasks } from '../../useTasks';
 
 function TasksApp() {
-
-  const {
-    removeTask,
-  } = useTasks();
 
   return (
     <Container>
@@ -20,14 +15,8 @@ function TasksApp() {
         body={<Form />} />
       <Section
         title="Lista zadań"
-        body={
-          <Tasks
-            removeTask={removeTask}
-          />
-        }
-        extraHeaderContent={
-          <Buttons />
-        } />
+        body={<Tasks />}
+        extraHeaderContent={<Buttons />} />
     </Container>
   );
 }

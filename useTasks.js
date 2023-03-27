@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+/* import { useState, useEffect } from "react";
 
 export const useTasks = () => {
     const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasksArray")) || []);
@@ -41,3 +41,4 @@ export const useTasks = () => {
         addNewTask
     }
 };
+ */
