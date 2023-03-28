@@ -13,6 +13,7 @@ https://maciejkurpiecki.github.io/toDo-List.react/
 - media queries
 - JavaScript
 - React
+- Redux
 - Styled-components
 # Getting Started with Create React App
 
