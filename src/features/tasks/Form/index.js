@@ -19,7 +19,7 @@ const Form = () => {
     const trimmedTaskContent = newTaskContent.trim();
 
     if (!trimmedTaskContent) {
-      return;
+      return inputRef.current.focus();
     }
     dispatch(addTask({
       content: trimmedTaskContent,
