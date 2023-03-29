@@ -31,6 +31,7 @@ export const StyledDoneButton = styled.button`
     border: none;
     order: 1;
     align-self: center;
+    cursor: pointer;
     flex-shrink: 0;
     color: ${({ theme }) => theme.colors.secondary};
 
@@ -49,6 +50,7 @@ export const StyledRemoveButton = styled.button`
     height: 30px;
     width: 30px;
     border: none;
+    cursor: pointer;
     order: 3;
     align-self: center;
     flex-shrink: 0;

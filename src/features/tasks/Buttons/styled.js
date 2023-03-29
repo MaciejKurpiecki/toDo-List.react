@@ -7,6 +7,7 @@ export const StyledButton = styled.button`
     padding: 0 10px;
     font-size: 18px;
     transition: 0.3s;
+    cursor: pointer;
 
     &:disabled{
         color: ${({ theme }) => theme.colors.disable};

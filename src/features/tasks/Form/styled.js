@@ -20,6 +20,7 @@ export const StyledFormAddButton = styled.button`
     flex-shrink: 0;
     flex-grow: 0;
     transition: 0.5s;
+    cursor: pointer;
 
     &:hover{
         filter: brightness(120%);
