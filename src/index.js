@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 import { theme } from './theme';
-import { addTask } from './features/tasks/tasksSlice';
 import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
