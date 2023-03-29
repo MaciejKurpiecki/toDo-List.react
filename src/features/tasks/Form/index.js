@@ -21,11 +21,13 @@ const Form = () => {
     if (!trimmedTaskContent) {
       return inputRef.current.focus();
     }
-    dispatch(addTask({
+
+    dispatch(addTask({      
       content: trimmedTaskContent,
       done: false,
       id: nanoid(),
     }));
+    
     setNewTaskContent("");
     inputRef.current.focus();
   };
