@@ -9,7 +9,6 @@ const Buttons = () => {
     if (!tasks.length) {
         return null;
     }
-    
     return (
         <ButtonsContainer>
             <StyledButton
