@@ -14,7 +14,6 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
-  max-width: 1000px;
   background-color: ${({ theme }) => theme.colors.body};
   word-break: break-word;
   padding: 20px;
