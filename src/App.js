@@ -1,5 +1,6 @@
 import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 import TasksApp from "./features/tasks/TasksApp";
+import TaskPage from "./features/tasks/Tasks/TaskPage.js" 
 import Author from "./features/autor/Author";
 
 
@@ -20,6 +21,9 @@ export default () => (
         </li>
       </ul>
       <Switch>
+      <Route path="/zadania/:id">
+          <TaskPage />
+        </Route>
         <Route path="/zadania">
           <TasksApp />
         </Route>
