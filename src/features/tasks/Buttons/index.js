@@ -18,10 +18,10 @@ const Buttons = () => {
 
     return (
         <ButtonsContainer>
-            <> <StyledButton onClick={() => dispatch(fetchExampleTasks())}>
+            {areTasksEmpty && <> <StyledButton onClick={() => dispatch(fetchExampleTasks())}>
                 Pobierz przykładowe zadania
             </StyledButton>
-            </>
+            </>}
             {!areTasksEmpty && <>
                 <StyledButton
                     onClick={() => dispatch(togglehideDone())}
