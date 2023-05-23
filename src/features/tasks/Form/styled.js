@@ -37,9 +37,9 @@ export const StyledFormAddButton = styled.button`
     }
 `;
 
-export const StyledFormInput = styled.input`
-    flex-grow: 1;
-    min-width: 100px;
-    padding: 10px;
-    border: 1px solid ${({ theme }) => theme.colors.border};
-`;
+// export const StyledFormInput = styled.input`
+//     flex-grow: 1;
+//     min-width: 100px;
+//     padding: 10px;
+//     border: 1px solid ${({ theme }) => theme.colors.border};
+// `;

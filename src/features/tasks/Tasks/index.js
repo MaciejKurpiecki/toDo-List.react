@@ -1,11 +1,15 @@
 import { StyledList, StyledItem, StyledDoneButton, StyledRemoveButton, StyledTask } from './styled';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTasks, toggleTaskDone, removeTask, selectHideDone } from '../tasksSlice';
-import { Link } from 'react-router-dom';
+import { toggleTaskDone, removeTask, selectHideDone, selectTaskByQuery } from '../tasksSlice';
+import { Link, useLocation } from 'react-router-dom';
+import searchQueryParamName from '../searchQueryParamName';
 
 const Tasks = () => {
 
-    const tasks = useSelector(selectTasks);
+    const location = useLocation();
+    const query = (new URLSearchParams(location.search).get(searchQueryParamName));
+
+    const tasks = useSelector(state => selectTaskByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
 
