@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const StyledList = styled.ul`
@@ -74,4 +75,9 @@ export const StyledTask = styled.span`
     ${({ done }) => done && css`
         text-decoration: line-through;
     `}
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.main}
 `;

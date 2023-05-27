@@ -8,7 +8,7 @@ export default () => (
         </header>
         <Section title="Maciej Kurpiecki"
             body={
-                <>test</>
+                <>Coś tu kiedyś będzie...</>
             } />
     </Container>
 );

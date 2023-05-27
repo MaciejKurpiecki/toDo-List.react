@@ -1,7 +1,7 @@
-import { StyledList, StyledItem, StyledDoneButton, StyledRemoveButton, StyledTask } from './styled';
+import { StyledList, StyledItem, StyledDoneButton, StyledRemoveButton, StyledTask, StyledLink } from './styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTaskDone, removeTask, selectHideDone, selectTaskByQuery } from '../tasksSlice';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import searchQueryParamName from '../searchQueryParamName';
 
 const Tasks = () => {
@@ -33,7 +33,7 @@ const Tasks = () => {
                     <StyledTask
                         done={task.done}
                     >
-                        <Link to={`/zadania/${task.id}`}>{task.content}</Link>
+                        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
                     </StyledTask>
                 </StyledItem>
             ))}
