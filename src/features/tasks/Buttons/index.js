@@ -6,11 +6,12 @@ import {
     selectAreTasksEmpty,
     selectIsEveryTaskDone,
     selectHideDone,
-    fetchExampleTasks
+    fetchExampleTasks,
+    selectLoading
 }
     from "../tasksSlice";
 
-const Buttons = () => {
+export const Buttons = () => {
     const areTasksEmpty = useSelector(selectAreTasksEmpty);
     const isEveryTaskDone = useSelector(selectIsEveryTaskDone);
     const hideDone = useSelector(selectHideDone);
@@ -18,10 +19,6 @@ const Buttons = () => {
 
     return (
         <ButtonsContainer>
-            {areTasksEmpty && <> <StyledButton onClick={() => dispatch(fetchExampleTasks())}>
-                Pobierz przykładowe zadania
-            </StyledButton>
-            </>}
             {!areTasksEmpty && <>
                 <StyledButton
                     onClick={() => dispatch(togglehideDone())}
@@ -38,4 +35,21 @@ const Buttons = () => {
         </ButtonsContainer>
     )
 };
-export default Buttons;
+
+export const ExampleTasksButton = () => {
+    const dispatch = useDispatch();
+    const loading = useSelector(selectLoading);
+
+    return (
+        <>
+
+            {<> <StyledButton
+                onClick={() => dispatch(fetchExampleTasks())}
+                disabled={loading ? true : false}
+            >
+                {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
+            </StyledButton>
+            </>}
+        </>
+    )
+};
