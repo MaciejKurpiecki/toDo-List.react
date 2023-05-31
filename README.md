@@ -14,6 +14,8 @@ https://maciejkurpiecki.github.io/toDo-List.react/
 - JavaScript
 - React
 - Redux
+- Redux-Saga
+- React Router
 - Styled-components
 # Getting Started with Create React App
 
