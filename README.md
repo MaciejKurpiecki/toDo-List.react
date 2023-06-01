@@ -5,7 +5,7 @@ Website has been reworked with immutable arrays. Currently developed in React.
 ## Demo
 https://maciejkurpiecki.github.io/toDo-List.react/
 
-![gif](Images/presentation.gif/)
+![gif](images/presentation.gif/)
 ## Technologies
 - HTML
 - ES6

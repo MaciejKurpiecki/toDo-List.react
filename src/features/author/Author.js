@@ -1,7 +1,7 @@
 import Container from "../../common/Container";
 import Section from "../../common/Section";
 
-export default () => (
+const Author = () => (
     <Container>
         <header>
             <h1>O autorze</h1>
@@ -12,3 +12,5 @@ export default () => (
             } />
     </Container>
 );
+
+export default Author;

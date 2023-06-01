@@ -10,6 +10,7 @@ export const useQueryParameters = (key) => {
 export const useReplaceQueryParameter = () => {
     const location = useLocation();
     const history = useHistory();
+
     return ({ key, value }) => {
         const searchParams = new URLSearchParams(location.search);
 
